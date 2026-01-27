@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@tailwind utilities;
+
+
+
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    font-family: Poppins;
+    overflow-x: hidden;
+    color: #4d5258;
+  }
+  .btn {
+    @apply text-white font-bold p-3 w-full rounded-md transition-colors duration-300 cursor-pointer active:scale-95 hover:bg-[rgba(0,0,0,0.6)] ;
+  }
+
+  .bg-bs-primary {
+    background-color: var(--bs_primary);
+  }
+  .text-bs-primary {
+    color: var(--bs_primary)
+  }
+
+  .bg-bs-secondary {
+    background-color: var(--bs_secondary);
+  }
+  .text-bs-secondary {
+    color: var(--bs_secondary)
+  }
+
+  .bg-bs-gray {
+    background-color: var(--bs_gray);
+  }
+  .text-bs-gray {
+    color: var(--bs_gray)
+  }
+
+  .bg-bs-bodycolor {
+    background-color: var(--bs_body_color);
+  }
+  .text-bs-bodycolor {
+    color: var(--bs_body_color)
+  }
+
+  .bg-bs-bodybg {
+    background-color: var(--bs_body_bg);
+  }
+  .text-bs-bodybg {
+    color: var(--bs_body_bg)
+  }
+
+  
+}
+
+@layer components {
+  .name-col {
+    @apply sticky left-0 bg-inherit pl-1;
+  }
+
+  .table-item {
+    @apply basis-1/6 shrink-0 px-1;
+  }
+}
+
+
+
+@custom-variant hover (&:hover);
+
+@utility bg-md-orange {
+    @apply bg-[#f15d22];
+}
+
+@utility text-md-orange {
+    @apply text-[#f15d22];
+}
+
+@utility text-md-darkgrey {
+  @apply text-[#4d5258];
+}
+
+@utility bg-md-lightgrey {
+  @apply bg-[rgba(230,230,230,0.5)];
+}
+
+@utility bg-md-mediumgrey {
+  @apply bg-[#d9d9d9];
+}
+
+@utility bg-md-darkgrey {
+  @apply bg-[#4d5258];
+}
+
+@utility no-scroll{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+      display: none;
+  }
+}
+
+@utility scrollbar-style {
+  scrollbar-width: thin;
+  scrollbar-color: #4d5258 transparent;
+}
+
+@media print {
+  @page {
+    size: landscape;
+  }
+
+  body * {
+    visibility: hidden
+  }
+
+  .printed, .printed * {
+    visibility: visible;
+  }
+
+  .printed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
