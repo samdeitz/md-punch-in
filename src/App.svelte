@@ -54,7 +54,7 @@
     
     try {
       // fetch from API
-      let data = await getFrom("/api/status.json"); // Evoke helper method
+      let data = await getFrom("/md-punch-in/api/status.json"); // Evoke helper method
 
       // if there is no response set the store empty
       if (data.response === false) {
@@ -78,7 +78,7 @@
   const fetchOptions = async () => {
 
     try {
-      let data = await getFrom("/api/settings.json"); // Evoke helper method
+      let data = await getFrom("/md-punch-in/api/settings.json"); // Evoke helper method
       
       // if there is no response set the store empty
       if (data.response === false) {
@@ -97,7 +97,7 @@
   // --- Fetch Employees ---
   const fetchEmployees = async () => {
     try {
-      let data = await getFrom("/api/employees.json"); // Evoke helper method
+      let data = await getFrom("/md-punch-in/api/employees.json"); // Evoke helper method
       
       // if there is no response set the store empty
       if (data.response === false) {

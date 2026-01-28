@@ -58,7 +58,6 @@
     let focusedOnName = false;      // Whether name input is focused (controls dropdown)
     let focusedOnStatus = false;    // Whether status dropdown is open
     $: isVisible = false;           // Toggles password visibility
-    $: console.log($InfoStore);
     // Reactive values for dropdown data
     $: filteredEmployees = $EmployeeStore ? [...$EmployeeStore].map((e) => e.displayname) : [];
     $: statuses = $OptionsStore ? $OptionsStore.punch_options.map((e) => e.text.toUpperCase()) : [];
