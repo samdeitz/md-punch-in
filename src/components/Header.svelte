@@ -67,9 +67,10 @@
 <HBox class="flex justify-between bg-bs-primary p-3 text-sm sm:text-xl text-white font-semibold items-center">
      <div class="flex items-center gap-2">
       {#if $OptionsStore && $OptionsStore.logo && $OptionsStore.app_name && $OptionsStore.logo !== "none"}
-      <img src={$OptionsStore.logo} alt="{$OptionsStore.app_name}">
+        <img src={$OptionsStore.logo} alt="{$OptionsStore.app_name}">
       {/if}
       <h1>Good {timeOfDay}!</h1>
     </div>
+    <h1>Employee Punch-In</h1>
     <h1>{time}</h1>
 </HBox>
