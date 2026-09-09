@@ -1,0 +1,9 @@
+services:
+  punchin:
+    build: .
+    networks:
+     - proxy
+
+networks:
+  proxy:
+    external: true
